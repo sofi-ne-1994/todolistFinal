@@ -22,12 +22,12 @@ Incluye un CRUD completo, lo que significa que podés:
 
 1. git clone https://github.com/sofi-ne-1994/todolistFinal.git
 2. carpeta todolist(backend)
+    - pip install -r requirements.txt
     - cd todolist
-    - python install -r requirements.txt
     - python manage.py runserver
     
 3. carpeta todolistFront(front)
     - cd todolistFront
     - npm install
     - npm run dev
-    
+
