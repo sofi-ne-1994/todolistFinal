@@ -1,0 +1,239 @@
+/* ----------------------------- */
+/*        RESET & GLOBAL         */
+/* ----------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Roboto, sans-serif;
+  background: #0d0f11;
+  color: #e5e5e5;
+  min-height: 100vh;
+}
+
+/* ----------------------------- */
+/*           NAVBAR              */
+/* ----------------------------- */
+
+nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav a {
+  color: #f1f1f1;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* ----------------------------- */
+/*            FOOTER             */
+/* ----------------------------- */
+
+footer {
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ----------------------------- */
+/*         PAGE WRAPPER          */
+/* ----------------------------- */
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+/* Tarjeta principal */
+.main-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  width: min(900px, 95%);
+  border-radius: 20px;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.main-card h1 {
+  margin-bottom: 25px;
+  font-size: 36px;
+  color: #fff;
+}
+
+/* ----------------------------- */
+/*        INPUTS & FORMS         */
+/* ----------------------------- */
+
+input,
+textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+
+  outline: none;
+  margin-bottom: 22px;
+  backdrop-filter: blur(4px);
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-left: 4px solid #38bdf8;
+}
+
+/* ----------------------------- */
+/*           BUTTONS             */
+/* ----------------------------- */
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #38bdf8;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background: #ef4444;
+  margin-top: 12px;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  transform: scale(1.03);
+}
+
+/* ----------------------------- */
+/*           TASK LIST           */
+/* ----------------------------- */
+
+ul {
+  list-style: none;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+  transition: 0.25s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* COMPLETADA */
+.task-item.completed {
+  background: rgba(0, 255, 140, 0.15);
+  border: 1px solid #10b981;
+}
+
+.task-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-checkbox {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  accent-color: #38bdf8;
+}
+
+.task-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #10b981;
+}
+
+.task-description {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 18px;
+}
+
+.task-date {
+  margin-top: 8px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+/* ----------------------------- */
+/*         SEARCH BOX            */
+/* ----------------------------- */
+
+.search-box {
+  margin-bottom: 25px;
+}
+
+/* ----------------------------- */
+/*      ABOUT PAGE IMAGE         */
+/* ----------------------------- */
+
+img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
